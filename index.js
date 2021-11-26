@@ -3,7 +3,7 @@
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 let play_btn = document.getElementById("play_btn")
-let prev_btn = document.getElementById('prev_btn')
+let speaker_btn = document.getElementById('speaker_btn')
 let next_btn = document.getElementById('next_btn')
 let audio = new Audio()
 let bar_width = 5;
@@ -142,7 +142,7 @@ function canvasFunction(e) {
         checkinitial = true
     }
 
-    // console.log(offSetX,offSetY) 
+    
 }
 
 canvas.addEventListener("mousedown", (e) => {
@@ -175,20 +175,7 @@ function pauseTrack() {
 
 
 
-prev_btn.addEventListener('click',function(){
-    if(music_index == 0){
-        loadTrack(0)
-    }
-    else{
-        loadTrack(music_index--)
-    }
 
-    if (checkinitial) {
-        start(index, x)
-    } else {
-        start(0, 0)
-    }
-})
 
 
 next_btn.addEventListener('click',function(){
